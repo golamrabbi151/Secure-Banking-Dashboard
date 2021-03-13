@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import './style.scss'
+import axios from 'axios'
+import {api} from '../../utils/api'
+import jwt_decode from 'jwt-decode'
 import { Images } from '../../utils/Images'
 import { Link, useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
@@ -8,13 +11,35 @@ const Login = () => {
     const history = useHistory()
     const { register, handleSubmit, errors } = useForm()
     const [isLogging, setLogging] = useState(false)
+    const token = localStorage.getItem('token')
+
+    const checkRole = (token) => {
+        const decode = jwt_decode(token)
+        const role = decode.role
+        if (role === 'admin') {
+            return history.push('/admin')
+        }
+    }
+
+    if (token) return checkRole(token)
 
     // Submit Form
     const onSubmit = async (data) => {
         try {
+            
             setLogging(true)
+
+            const response = await axios.post(`${api}admin/login`,data)
+            // console.log(response)
+            if (response.status === 200) {
+                localStorage.setItem('token', response.data.token)
+                checkRole(response.data.token)
+                setLogging(false)
+              
+            }
+
             console.log(data)
-            localStorage.setItem('token', data.email)
+            localStorage.setItem('token', response.data.token)
 
             setTimeout(() => {
                 history.push('/admin')

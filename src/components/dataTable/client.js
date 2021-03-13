@@ -21,7 +21,7 @@ const Index = ({ items }) => {
                         <td>Name</td>
                         <td>E-mail</td>
                         <td>Account No</td>
-                        <td>Status</td>
+                        {/* <td>Status</td> */}
 
                         {/* <td className="text-center">Action</td> */}
                     </tr>
@@ -38,7 +38,7 @@ const Index = ({ items }) => {
                             <td>{item.name}</td>
                             <td className="text-lowercase">{item.email}</td>
                             <td className="text-lowercase">{item.accountNumber}</td>
-                            <td className="text-lowercase">{item.isActive == 1 ? <p style={{ color: "green" }}>Activated</p> : <p style={{ color: "red" }}>Inactivated</p>}</td>
+                            {/* <td className="text-lowercase">{item.isActive == 1 ? <p style={{ color: "green" }}>Activated</p> : <p style={{ color: "red" }}>Inactivated</p>}</td> */}
 
                             {/* <td className="text-center">
                                 <ul>

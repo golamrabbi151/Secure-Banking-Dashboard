@@ -96,7 +96,7 @@ const Layout = () => {
                                 activeClassName="isActive"
                                 type="button"
                                 className="btn shadow-none"
-                            ><Icon icon={ic_people} size={20} />Users</NavLink>
+                            ><Icon icon={ic_people} size={20} />App Users</NavLink>
                         </li>
                         {/* client Links */}
                         <li>

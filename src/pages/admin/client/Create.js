@@ -3,8 +3,8 @@ import './style.scss'
 
 const Create = () => {
     return (
-        <div className="container-fluid py-5">
-            <div className="shadow" style={{ marginLeft: 15,marginRight: 15, backgroundColor: '#fff', paddingTop: 50, paddingBottom: 50 }}>
+        <div className="container-fluid py-4">
+            <div className="shadow" style={{ marginLeft: 15,marginRight: 15, backgroundColor: '#fff' }}>
                 <div className="row" >
                     <div className="col-12 col-lg-8 offset-lg-2 create-col-style" >
                         <h3 className="text-center ">Create Client</h3>

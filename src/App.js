@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import Login from './pages/auth/Login'
-import Reset from './pages/auth/Reset'
+// import Reset from './pages/auth/Reset'
 import AdminMaster from './pages/admin/master/Index'
 import FourOFour from './pages/fourOfour/Index'
 
@@ -21,7 +21,7 @@ function App() {
         <ScrollToTop>
           <Switch>
             <Route exact path="/" component={Login} />
-            <Route exact path="/reset" component={Reset} />
+            {/* <Route exact path="/reset" component={Reset} /> */}
 
             <PrivateRoute path="/admin" role="admin">
               <AdminMaster />
