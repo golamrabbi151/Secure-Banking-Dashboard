@@ -3,14 +3,14 @@ import Axios from 'axios'
 import { api } from '../../../utils/api'
 // import LoadingComponent from '../../../components/loading/Index'
 import './style.scss'
-import { subMinutes } from 'date-fns'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 
 
 
 const Create = () => {
-
+    const history = useHistory()
     // const { register, handleSubmit, errors } = useForm()
     const [isUpdate, setUpdate] = useState(false)
     const [header] = useState({
@@ -30,7 +30,7 @@ const Create = () => {
     function submit(e){
         e.preventDefault()
         console.log(data)
-        axios.post(`${api}/admin/client/create`,{
+        axios.post(`${api}admin/client/create`,{
             name:data.name,
             email:data.email,
             dob:data.dob,
@@ -39,11 +39,15 @@ const Create = () => {
             branch:data.branch
         },header)
             .then(res=>{
-                console.log(res.data)
-            })
-            .catch()
+                // console.log(res.data)
+                // setData()
+                setTimeout(() => {
+                    history.push('/admin/client')
 
-        
+                }, 1000);
+            })
+            // .catch()
+
     }
     
 
