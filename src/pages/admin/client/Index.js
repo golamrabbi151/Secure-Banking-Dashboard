@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react'
 import './style.scss'
 import Axios from 'axios'
 import { api } from '../../../utils/api'
-
 import DataTable from '../../../components/dataTable/client'
 import LoadingComponent from '../../../components/loading/Index'
 
