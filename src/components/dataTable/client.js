@@ -23,7 +23,7 @@ const Index = ({ items }) => {
                         <td>Account No</td>
                         {/* <td>Status</td> */}
 
-                        {/* <td className="text-center">Action</td> */}
+                        <td className="text-center">Action</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,11 +40,11 @@ const Index = ({ items }) => {
                             <td className="text-lowercase">{item.accountNumber}</td>
                             {/* <td className="text-lowercase">{item.isActive == 1 ? <p style={{ color: "green" }}>Activated</p> : <p style={{ color: "red" }}>Inactivated</p>}</td> */}
 
-                            {/* <td className="text-center">
+                            <td className="text-center">
                                 <ul>
                                     <li>
                                         <Link
-                                            to="/admin/users"
+                                            to="/admin/client"
                                             type="button"
                                             className="btn btn-sm rounded-circle shadow-none"
                                         >
@@ -53,7 +53,7 @@ const Index = ({ items }) => {
                                     </li>
                                     <li>
                                         <Link
-                                            to="/admin/users"
+                                            to="/admin/client"
                                             type="button"
                                             className="btn btn-sm rounded-circle shadow-none"
                                         >
@@ -70,7 +70,7 @@ const Index = ({ items }) => {
                                         </button>
                                     </li>
                                 </ul>
-                            </td> */}
+                            </td>
                         </tr>
 
                     )}

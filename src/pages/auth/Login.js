@@ -61,7 +61,8 @@ const Login = () => {
                             <img src={Images.AuthBg} className="img-fluid" alt="..." />
                             <div className="overlay">
                                 <div className="flex-center flex-column">
-                                    <img src={Images.Logo} className="img-fluid" alt="..." />
+                                    {/* <img src={Images.Logo} className="img-fluid" alt="..." /> */}
+                                    <h1 style={{fontSize:70,fontWeight:900,color:"#ff5733"}}><span style={{fontSize:40,fontWeight:'bold'}}>Secure</span> <br /> Banking</h1>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +72,9 @@ const Login = () => {
                         <div className="flex-center flex-column">
                             <div className="card border-0">
                                 <div className="d-lg-none">
-                                    <img src={Images.Logo} className="img-fluid" alt="..." />
+                                    {/* <img src={Images.Logo} className="img-fluid" alt="..." /> */}
+                                    <h1 style={{fontSize:46,fontWeight:900,color:"#ff5733"}}><span style={{fontSize:31,fontWeight:'bold'}}>Secure</span> <br /> Banking</h1>
+
                                 </div>
                                 <h3 className="mb-4">Get Started!</h3>
                                 <form onSubmit={handleSubmit(onSubmit)}>
